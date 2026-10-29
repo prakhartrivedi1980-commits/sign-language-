@@ -1,0 +1,57 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+kaggle.json
+*.pem
+
+# Datasets and extracted features
+data/
+*.npy
+*.npz
+
+# Trained models and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+checkpoints/
+wandb/
+runs/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# CMake build files
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+
+# Keep source code, configs, tests, docs, and small results tracked
