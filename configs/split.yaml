@@ -1,0 +1,17 @@
+
+# LSA64 signer-independent dataset split
+# Signer IDs are taken from video filenames.
+
+dataset:
+  name: LSA64
+  root: data/raw/all
+  num_classes: 64
+  num_signers: 10
+  repetitions_per_signer: 5
+
+split:
+  train_signers: [1, 2, 3, 4, 5, 6, 7]
+  val_signers: [8]
+  test_signers: [9, 10]
+
+seed: 42

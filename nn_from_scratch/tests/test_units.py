@@ -331,3 +331,40 @@ def test_adam_first_step():
     )
 
     assert optimizer.t == 1
+
+def test_mlp_learns_xor():
+    import numpy as np
+    from nn_from_scratch.mlp import MLP, cross_entropy_loss
+    from nn_from_scratch.optimizers import Adam
+
+    X = np.array([
+        [0.0, 0.0],
+        [0.0, 1.0],
+        [1.0, 0.0],
+        [1.0, 1.0]
+    ])
+
+    y = np.array([0, 1, 1, 0])
+    targets = np.eye(2)[y]
+
+    model = MLP(
+        layer_sizes=[2, 8, 2],
+        hidden_activation="tanh",
+        output_activation="linear",
+        seed=42
+    )
+
+    optimizer = Adam(learning_rate=0.01)
+
+    for epoch in range(3000):
+        logits = model.forward(X)
+        loss, gradient = cross_entropy_loss(
+            logits, targets
+        )
+
+        model.backward(gradient)
+        optimizer.step(model)
+
+    predictions = np.argmax(model.forward(X), axis=1)
+
+    assert np.array_equal(predictions, y)

@@ -2,31 +2,53 @@
 
 ## Project status
 
-**Current phase:** Phase 1 — Neural-Network Fundamentals from Scratch
+## Phase 1 — Neural-Network Fundamentals from Scratch
 
-## Completed / reported work
+**Status:** Implementation complete — final regression verification pending.
 
-- [x] Project roadmap and architecture planned.
-- [x] Gradient checking implementation worked on (`test_gradients.py`).
-- [x] Studied neurons, MLP, backpropagation, and optimizers.
+### Completed Tasks
 
-## Verification pending
+- [x] Implemented tensor operations using NumPy.
+- [x] Implemented neurons with sigmoid, tanh, and ReLU activation functions.
+- [x] Implemented Multi-Layer Perceptron (MLP).
+- [x] Implemented forward propagation and backpropagation.
+- [x] Implemented SGD, Momentum, and Adam optimizers.
+- [x] Implemented numerical gradient checking.
+- [x] Passed all 29 original automated tests.
+- [x] Successfully passed the XOR learning test.
+- [x] Trained MLP on a two-class spiral dataset for 2,000 epochs.
+- [x] Generated and verified `results/toy_training.png`.
 
-- [ ] Confirm all gradient tests pass.
-- [ ] Confirm tensor demonstration is complete.
-- [ ] Confirm neuron and activation implementations.
-- [ ] Confirm MLP forward and backward implementations.
-- [ ] Confirm SGD, momentum, and Adam implementations.
+### Pending Tasks
 
-## Next tasks
+- [ ] Run the complete regression test suite after adding the XOR test.
+- [ ] Record final training loss and accuracy.
 
-- [ ] Complete `test_units.py`.
-- [ ] Verify the MLP learns XOR.
-- [ ] Train the MLP on a toy dataset.
-- [ ] Save the training loss curve in `results/`.
-- [ ] Prepare Phase 1 viva notes.
-- [ ] Run the full Phase 1 test suite.
+### Generated Files
 
-## Upcoming milestone
+- `nn_from_scratch/tensor_demo.py`
+- `nn_from_scratch/neuron.py`
+- `nn_from_scratch/mlp.py`
+- `nn_from_scratch/optimizers.py`
+- `nn_from_scratch/train_toy.py`
+- `nn_from_scratch/tests/test_units.py`
+- `nn_from_scratch/tests/test_gradients.py`
+- `results/toy_training.png`
 
-Complete Phase 1 and begin Phase 2: LSA64 dataset acquisition and the ResNet-18 vision pipeline.
+## Phase 2 — Dataset and Vision Pipeline
+
+**Status:** In progress
+
+### Completed
+- [x] Downloaded and extracted LSA64 Cut dataset.
+- [x] Verified 3,200 videos, 64 classes, 10 signers, and 5 repetitions.
+- [x] Confirmed zero missing filename combinations.
+- [x] Created signer-independent split configuration.
+- [x] Verified training, validation, and testing splits.
+
+### Pending
+- [ ] Verify video readability using OpenCV.
+- [ ] Implement frame extraction and preprocessing.
+- [ ] Implement PyTorch dataset loader.
+- [ ] Build ResNet-18 model.
+- [ ] Train and evaluate vision model.
