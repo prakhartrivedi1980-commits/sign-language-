@@ -35,20 +35,26 @@
 - `nn_from_scratch/tests/test_gradients.py`
 - `results/toy_training.png`
 
-## Phase 2 — Dataset and Vision Pipeline
+### Phase 2 — ResNet-18 Training
 
-**Status:** In progress
+**Status: Training completed; test evaluation pending**
 
-### Completed
-- [x] Downloaded and extracted LSA64 Cut dataset.
-- [x] Verified 3,200 videos, 64 classes, 10 signers, and 5 repetitions.
-- [x] Confirmed zero missing filename combinations.
-- [x] Created signer-independent split configuration.
-- [x] Verified training, validation, and testing splits.
+- [x] Trained ResNet-18 locally using NVIDIA RTX 4050 (6 GB VRAM).
+- [x] Used signer-independent LSA64 dataset splits.
+- [x] Used 16 cached frames per video.
+- [x] Completed head training and fine-tuning.
+- [x] Applied mixed precision and chunked backpropagation.
+- [x] Completed 13 training epochs.
+- [x] Achieved 100.00% final training accuracy.
+- [x] Achieved 95.00% validation accuracy at epoch 13.
+- [x] Achieved 95.31% best validation accuracy.
+- [x] Early stopping triggered after five epochs without improvement.
+- [x] Saved training checkpoints and training history.
 
 ### Pending
-- [ ] Verify video readability using OpenCV.
-- [ ] Implement frame extraction and preprocessing.
-- [ ] Implement PyTorch dataset loader.
-- [ ] Build ResNet-18 model.
-- [ ] Train and evaluate vision model.
+
+- [ ] Verify `best.pt` and `last.pt`.
+- [ ] Evaluate best model on 640 held-out test videos.
+- [ ] Generate confusion matrix and classification metrics.
+- [ ] Generate training loss and accuracy curves.
+- [ ] Document failure cases and model limitations.

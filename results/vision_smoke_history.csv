@@ -1,0 +1,2 @@
+epoch,stage,train_loss,train_accuracy,val_loss,val_accuracy,epoch_seconds,peak_allocated_gb,peak_reserved_gb
+1,head,3.740391820669174,0.0,2.650694489479065,1.0,2.1723171999910846,0.10077571868896484,0.1328125
