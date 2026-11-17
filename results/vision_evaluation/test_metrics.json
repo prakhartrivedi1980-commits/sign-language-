@@ -1,0 +1,16 @@
+{
+  "checkpoint": "D:\\DL\\Sign Language\\checkpoints\\vision\\best.pt",
+  "test_videos": 640,
+  "test_signers": [
+    9,
+    10
+  ],
+  "accuracy": 0.9359375,
+  "loss": 0.18068459282125976,
+  "macro_precision": 0.9495372886917004,
+  "macro_recall": 0.9359375,
+  "macro_f1": 0.9326728523658419,
+  "correct_predictions": 599,
+  "incorrect_predictions": 41,
+  "evaluation_seconds": 67.15949810005259
+}
